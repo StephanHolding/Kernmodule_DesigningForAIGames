@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEditor;
@@ -33,6 +34,7 @@ public class Guard : PickupController, IHasState
     private Player thePlayer;
     private ParticleSystem smokeCloud;
     private ConeOfView coneOfView;
+    private TextMeshPro textMeshPro;
 
     private readonly Blackboard guardBlackboard = new Blackboard();
     private const string BLACKBOARD_MOVEMENT_TARGET = "MovementTarget";
@@ -45,6 +47,7 @@ public class Guard : PickupController, IHasState
         smokeCloud = GetComponentInChildren<ParticleSystem>();
         thePlayer = FindObjectOfType<Player>();
         coneOfView = GetComponent<ConeOfView>();
+        textMeshPro = GetComponentInChildren<TextMeshPro>();
     }
 
     private void Start()
@@ -55,6 +58,7 @@ public class Guard : PickupController, IHasState
     private void FixedUpdate()
     {
         tree.Run();
+        LogStateToUI();
     }
     
     private void CreateBehaviourTree()
@@ -130,10 +134,9 @@ public class Guard : PickupController, IHasState
         guardState = (GuardState)_state;
     }
 
-    public void OnDrawGizmos()
+    public void LogStateToUI()
     {
-        Handles.Label(transform.position + new Vector3(0, 2.5f, 0), guardState.ToString(),
-            new GUIStyle() { alignment = TextAnchor.MiddleCenter });
+        textMeshPro.text = guardState.ToString();
     }
 
     private IEnumerator SmokeBombed()

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.AI;
@@ -21,6 +22,7 @@ public class Rogue : MonoBehaviour, IHasState
     private Animator animator;
     private RogueState rogueState;
     private Blackboard blackboard = new Blackboard();
+    private TextMeshPro textMeshPro;
     
     private float DistanceToPlayer => Vector3.Distance(transform.position, player.transform.position);
 
@@ -35,6 +37,7 @@ public class Rogue : MonoBehaviour, IHasState
         player = FindObjectOfType<Player>();
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
+        textMeshPro = GetComponentInChildren<TextMeshPro>();
     }
 
     private void Start()
@@ -77,6 +80,7 @@ public class Rogue : MonoBehaviour, IHasState
     private void FixedUpdate()
     {
         tree?.Run();
+        LogStateToUI();
     }
     
     public void SetState(int _state)
@@ -84,9 +88,8 @@ public class Rogue : MonoBehaviour, IHasState
         rogueState = (RogueState)_state;
     }
 
-    public void OnDrawGizmos()
+    public void LogStateToUI()
     {
-        Handles.Label(transform.position + new Vector3(0, 2.5f, 0), rogueState.ToString(),
-            new GUIStyle() { alignment = TextAnchor.MiddleCenter });
+        textMeshPro.text = rogueState.ToString();
     }
 }
