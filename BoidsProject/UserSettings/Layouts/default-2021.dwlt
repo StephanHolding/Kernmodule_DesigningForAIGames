@@ -76,7 +76,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 19
+  controlID: 31
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 42
+  controlID: 57
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 96
+  controlID: 30
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 97
+  controlID: 64
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1614,14 +1614,14 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Stephan\Documents\GitHub\Kernmodule_DesigningForAIGames\Developing_For_AI_Games
+  m_LastProjectPath: C:\Users\Stephan\Documents\GitHub\Kernmodule_DesigningForAIGames\BoidsProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 42560000
     m_LastClickedID: 22082
-    m_ExpandedIDs: 00000000e65a0000e85a0000ea5a0000ec5a0000ee5a0000
+    m_ExpandedIDs: 00000000ea5a0000ec5a0000ee5a0000f05a0000f25a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1649,7 +1649,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000e65a0000e85a0000ea5a0000ec5a0000ee5a0000
+    m_ExpandedIDs: ffffffff00000000ea5a0000ec5a0000ee5a0000f05a0000f25a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1777,7 +1777,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 38130000
       m_LastClickedID: 0
       m_ExpandedIDs: 30fbffff
       m_RenameOverlay:
@@ -2167,7 +2167,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -2180,7 +2180,7 @@ MonoBehaviour:
       y: 21
       width: 1408
       height: 609
-    m_Scale: {x: 0.28194445, y: 0.28194445}
+    m_Scale: {x: 0.29166666, y: 0.29166666}
     m_Translation: {x: 704, y: 304.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -2188,12 +2188,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -2496.9458
-      y: -1080
-      width: 4993.8916
-      height: 2160
+      x: -2413.7144
+      y: -1044
+      width: 4827.4287
+      height: 2088
     m_MinimalGUI: 1
-  m_defaultScale: 0.28194445
+  m_defaultScale: 0.29166666
   m_LastWindowPixelSize: {x: 1408, y: 630}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1

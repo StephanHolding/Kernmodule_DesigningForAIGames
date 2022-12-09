@@ -51,7 +51,6 @@ public class Rogue : MonoBehaviour, IHasState
                {
                    new BT_Sequence(new BTBaseNode[]
                    {
-                       //TODO if we're not already hiding, find a place to hide.
                        new BT_Condition(() => rogueState != RogueState.Hiding),
                        new BT_SetState(this, (int)RogueState.FindingHidingPlace),
                        new BT_FindClosest<HidingPlace>(transform, blackboard, POSITION_KEY),

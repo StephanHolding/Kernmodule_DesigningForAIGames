@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 
 public class Player : MonoBehaviour, IDamageable
 {
@@ -20,7 +18,7 @@ public class Player : MonoBehaviour, IDamageable
     private Vector3 moveDirection;
     private Collider mainCollider;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
@@ -43,7 +41,7 @@ public class Player : MonoBehaviour, IDamageable
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         vert = Input.GetAxis("Vertical");
         hor = Input.GetAxis("Horizontal");

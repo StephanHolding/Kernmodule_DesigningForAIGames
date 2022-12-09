@@ -2551,6 +2551,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 5596482735912298170, guid: 3372616d0fb4c854da6e21979b1bf33a,
+        type: 3}
+      propertyPath: viewRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5596482735912298174, guid: 3372616d0fb4c854da6e21979b1bf33a,
         type: 3}
       propertyPath: m_RootOrder

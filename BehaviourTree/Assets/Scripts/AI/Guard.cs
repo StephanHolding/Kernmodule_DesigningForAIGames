@@ -2,7 +2,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEditor;
 
 public class Guard : PickupController, IHasState
 {
@@ -20,7 +19,6 @@ public class Guard : PickupController, IHasState
     public Transform[] patrollingWaypoints;
     
     private const float ATTACK_RANGE = 0.25f;
-    private const float DETECTION_RANGE = 10f;
     private const float SMOKEBOMB_TIME = 10f;
     
     private float DistanceToPlayer => Vector3.Distance(gameObject.transform.position, thePlayer.transform.position);
@@ -38,7 +36,6 @@ public class Guard : PickupController, IHasState
 
     private readonly Blackboard guardBlackboard = new Blackboard();
     private const string BLACKBOARD_MOVEMENT_TARGET = "MovementTarget";
-    private const string BLACKBOARD_GUN_POSITION_KEY = "gunpos";
 
     private void Awake()
     {

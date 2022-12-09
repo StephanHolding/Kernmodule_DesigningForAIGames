@@ -10,6 +10,9 @@ public class ConeOfView : MonoBehaviour
     public LayerMask obstructionMask;
     public float viewRange;
     public int viewAngle;
+    
+    #if UNITY_EDITOR
+    
     private void OnDrawGizmos()
     {
         Handles.color = Color.white;
@@ -23,6 +26,8 @@ public class ConeOfView : MonoBehaviour
         Handles.DrawLine(transform.position, transform.position + lineDirection2 * viewRange);
     }
 
+    #endif
+    
     public bool CheckConeOfView()
     {
         Collider[] collidersInRange = Physics.OverlapSphere(transform.position, viewRange, targetMask);
